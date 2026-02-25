@@ -1,0 +1,29 @@
+{
+  "name": "mihailromanov/json-rpc-server",
+  "description": "JSON-RPC 2.0 server library for PHP 8.3 with batch support and optional parallel execution.",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^8.3",
+    "psr/log": "^3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.5"
+  },
+  "suggest": {
+    "ext-openswoole": "Enable OpenSwoole HTTP adapter and coroutine batch execution"
+  },
+  "autoload": {
+    "psr-4": {
+      "CatalogCodex\\JsonRpc\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "CatalogCodex\\JsonRpc\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  }
+}
