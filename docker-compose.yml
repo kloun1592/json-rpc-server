@@ -1,0 +1,14 @@
+services:
+  rpc:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "9501:9501"
+    command: ["php", "examples/openswoole-server.php"]
+
+  test:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    command: ["composer", "test"]
